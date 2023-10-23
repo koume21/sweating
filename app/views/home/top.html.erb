@@ -6,6 +6,14 @@
     <h1>熱中症予防</h1>
     <p>発汗量の予測</p>
 
-    <%= form_with  %>
+    <%= form_with url:"/home/keisan" do |form| %>
+      <%= form.label "体重" %>
+      <%= form.text_field :weigh %>
+      <%= form.label "減少" %>
+      <%= form.text_field :small %>
+      <%= form.label "運動時間" %>
+      <%= form.text_field :move_time %>
+      <%= form.submit %>
+    <% end %>
   </body>
 </html>
